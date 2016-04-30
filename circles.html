@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Disappearing circles</title>
+	<style>
+		.circle {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			display: inline-block;
+			margin:  50px;
+			padding: 30px;
+		}
+
+		#yellow {
+			background-color: yellow;
+		}
+
+		#green {
+			background-color: green;
+		}
+
+		#red {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle" id="yellow">Click me to make me disappear</div>
+	<div class="circle" id="green">Click me to make me disappear</div>
+	<div class="circle" id="red">Click me to make me disappear</div>
+
+	<script type="text/javascript">
+		document.getElementById("yellow").onclick = function() {
+			document.getElementById("yellow").style.display = "none";
+		}	
+		document.getElementById("green").onclick = function() {
+			document.getElementById("green").style.display = "none";
+		}	
+		document.getElementById("red").onclick = function() {
+			document.getElementById("red").style.display = "none";
+		}	
+	</script>
+</body>
+</html>

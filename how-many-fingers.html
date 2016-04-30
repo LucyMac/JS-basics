@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How many fingers</title>
+</head>
+<body>
+	<p>How many fingers am I holding up?</p>
+	<input id="input" type="text" placeholder="Enter a number">
+	<button id="button">Guess</button>
+</body>
+<script>
+	var computerChoice = "";
+	var userGuess = "";
+
+	//onclick of button, compare computerChoice with userGuess and return feedback.
+
+	document.getElementById("button").onclick = function() {
+
+		computerChoice = Math.floor(Math.random() * 6);
+		userGuess = document.getElementById("input").value;
+		console.log(computerChoice);
+		console.log(userGuess);
+
+		if (computerChoice == userGuess) {
+			alert("congrats");
+		}
+
+		else {
+			alert("try again");
+		};
+	};
+
+</script>
+</html>

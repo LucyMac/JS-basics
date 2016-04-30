@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Variables</title>
+</head>
+<body>
+	<input id="textInput" type="text">
+	<button id="changeText">Change the text</button>
+	<p id="targetPara">This is some text that will change soon.</p>
+</body>
+	<script>
+		document.getElementById("changeText").onclick = function() {
+			var textEntered = document.getElementById("textInput").value;
+			document.getElementById("targetPara").innerHTML = textEntered;
+		}
+	</script>
+</html>
+
