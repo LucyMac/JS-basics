@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<title>Custom Signage</title>
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			padding: 20px;
+		}
+
+		h1 {
+			font-size: 24px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #2bbc9a;
+		}
+
+		p {
+			font-size: 15px;
+		}
+		
+		input {
+			height: 30px;
+			width: 300px;
+			padding: 5px;
+			margin-top: 20px;
+		}
+
+		button {
+			border-radius: 5px;
+			background-color: #2bbc9a !important;
+			color: #fff;
+		}
+
+		#cost-display {
+			margin-top: 30px;
+			font-weight: bold;
+			color: #2bbc9a;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Custom signage</h1>
+	<p>We provide high quality custom signage for businesses and personal projects.</p>
+	<p>Signs are charged at $5 per letter - type in your name below to calculate the cost of your custom sign:</p>
+	<input id="name" type="text">
+	<button class="w3-btn" type="submit" id="button">Calculate cost</button>
+	<div id="cost-display"></div>
+	<script>
+		document.getElementById("button").onclick = function () {
+			var name = document.getElementById("name").value;
+			var cost = name.length * 5;
+			console.log(cost);
+			document.getElementById("cost-display").innerHTML = "Your sign will cost $" + cost + ".";
+		}
+	</script>
+</body>
+</html>
