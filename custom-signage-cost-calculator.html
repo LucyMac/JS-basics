@@ -40,7 +40,13 @@
 			font-weight: bold;
 			color: #2bbc9a;
 		}
-
+		
+		#error {
+			display: none;
+			color: red;
+			font-size: 12px;
+			padding-top: 5px;
+		}
 	</style>
 </head>
 <body>
@@ -49,13 +55,22 @@
 	<p>Signs are charged at $5 per letter - type in your name below to calculate the cost of your custom sign:</p>
 	<input id="name" type="text">
 	<button class="w3-btn" type="submit" id="button">Calculate cost</button>
+	<p id="error">You have not entered anything.</p>
 	<div id="cost-display"></div>
 	<script>
 		document.getElementById("button").onclick = function () {
 			var name = document.getElementById("name").value;
-			var cost = name.length * 5;
-			console.log(cost);
-			document.getElementById("cost-display").innerHTML = "Your sign will cost $" + cost + ".";
+			if (name !== "") {
+				document.getElementById("error").style.display = "none";
+				var cost = name.length * 5;
+				console.log(cost);
+				document.getElementById("cost-display").style.display = "block";
+				document.getElementById("cost-display").innerHTML = "Your sign will cost $" + cost + ".";
+			}
+			else {
+				document.getElementById("error").style.display = "block";
+				document.getElementById("cost-display").style.display = "none";
+			}
 		}
 	</script>
 </body>
