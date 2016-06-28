@@ -1,6 +1,6 @@
-# JS exercises
+# JS Basics
 
-This is a random collection of exercises I did through my journey learning JavaScript. The ones visible so far are extremely beginner level, covering absolute basics but as I progress I will add more complex problems and their solutions. 
+This is a random collection of exercises I did at the start of my discovery of JavaScript. These are beginner-level snippets covering  basic JS concepts and syntax.
 
 ## Overview of contents
 
